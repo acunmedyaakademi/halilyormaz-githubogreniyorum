@@ -1,0 +1,213 @@
+
+*, *::before, *::after {
+box-sizing: border-box;
+}
+/*
+2. Remove default margin
+*/
+* {
+margin: 0;
+padding: 0;
+}
+/*
+Typographic tweaks!
+3. Add accessible line-height
+4. Improve text rendering
+*/
+body {
+line-height: 1.5;
+-webkit-font-smoothing: antialiased;
+}
+/*
+5. Improve media defaults
+*/
+img, picture, video, canvas, svg {
+display: block;
+max-width: 100%;
+}
+/*
+6. Remove built-in form typography styles
+*/
+input, button, textarea, select {
+font: inherit;
+}
+/*
+7. Avoid text overflows
+*/
+
+
+:root{
+--primary-color:#0E8784;
+--primary-accent-color:#66D2CF;
+--secondary-color:#333D4B;
+--highlight-color:#FDD6BA;
+--light-color:#FEFCF7;
+--dark-color:#83888F;
+}
+
+
+
+p, h1, h2, h3, h4, h5, h6 {
+overflow-wrap: break-word;
+}
+
+a {
+text-decoration: none;
+color: var(--dark-color);
+
+}
+
+ul{
+list-style: none;
+
+}
+
+
+
+
+h1,h2,h3,h4{
+font-family: "Fraunces";
+font-weight: 900;
+
+}
+
+h1{
+font-size: 72px;
+line-height: 72px;
+margin-bottom: 32px;
+}
+
+h2{
+font-size: 40px;
+line-height: 48px;
+margin-bottom: 32px;
+
+}
+
+h3{
+font-size: 32px;
+line-height: 36px;
+margin-bottom: 43px;
+}
+
+h4{
+
+font-size: 24px;
+line-height: 32px;
+color: var(--dark-color);
+}
+
+p{
+margin-bottom: 28px;
+
+}
+
+.btn{
+background-color: var(--primary-color);
+color: var(--light-color);
+font-family: "Fraunces",sans-serif;
+font-weight: 900;
+font-size: 18px;
+line-height: 25px;
+/* font:900 18px/25px "Fraunces",sans-serif; */
+padding: 13px 28px;
+display: inline-block;
+border-radius: 10px;
+
+
+}
+
+.btn:hover{
+
+}
+
+
+body{
+font: 16px/26px "Barlow",system-ui,sans-serif;
+color: var(--secondary-color);
+background-color: var(--light-color);
+
+
+}
+
+.container{
+width: 1280px;
+margin-inline: auto;
+
+}
+
+.header{
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding-block: 43px;
+}
+
+.nav  {
+display: flex;
+gap: 32px;
+font-weight: bold;
+font-size: 12px;
+line-height: 15px;
+text-transform: uppercase;
+color: var(--dark-color);
+}
+
+.footer{
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding-block: 43px;
+background-color: var(--secondary-color);
+padding-inline: 85px;
+
+}
+
+.footer #coffeeroasters{
+    fill: #FEFCF7;
+}
+
+.footer .nav {
+    
+}
+
+
+.steps-container{
+    padding-left: 85px;
+    padding-right: 150px;
+
+}
+
+
+.steps-container h4{
+    margin-bottom: 80px;
+}
+
+.steps{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    /* gap: 95px; */
+    list-style: none;
+    position: relative;
+}
+
+.steps li:after{
+    content:" ";
+    position: absolute;
+    border: 2px solid var(--primary-color);
+    border-radius: 50%;
+    background-color: var(--light-color);
+    width: 29px;
+    height: 29px;
+    top: -16px;
+}
+
+.steps li{
+    border-top: 2px solid var(--highlight-color);
+    padding-top: 70px;
+    padding-right: 95px;
+}
+
+.steps li:last-child{
+    border-top: none;
+}
